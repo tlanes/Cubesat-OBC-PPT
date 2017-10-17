@@ -1,5 +1,6 @@
 //MASTER
 #include <Wire.h>
+#include <avr/wdt.h>
 
 const byte MY_ADDRESS = 25;
 const byte SLAVE_ADDRESS = 42;
@@ -11,10 +12,15 @@ void setup ()
   Wire.begin (MY_ADDRESS);
   pinMode (LED, OUTPUT);   
   Wire.onReceive(receiveEvent);  
+  wdt_disable(); 
+  wdt_enable(WDT0_4S); //watchdog enabled at 4s
   }  // end of setup
 
 void loop () 
   {
+    
+  wdt_reset(); //watchdog reset
+  
   while (Serial.available()){
    byte x = Serial.read();
    Wire.beginTransmission(SLAVE_ADDRESS);
