@@ -5,8 +5,6 @@ const byte MY_ADDRESS = 42;
 const byte OTHER_ADDRESS = 25;
 const int ledPin = 3;
 int ledState = LOW;
-unsigned long previousMillis = 0;
-unsigned long interval = 100;
  
 void setup () 
   {
@@ -69,12 +67,12 @@ switch(c){
   }
   }
 } // end of receiveEvent
-byte x = 0x00;
+byte x = 1;
 
 void requestEvent ()
 {
   Serial.print("Request from Master. Sending: ");
-  Serial.print(x, HEX);
+  Serial.print(x);
   Serial.print("\n");
 
   Wire.write(x);
