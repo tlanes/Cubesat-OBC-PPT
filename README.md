@@ -12,7 +12,9 @@
 
 
 *FUTURE TASKS
+    """
     - switch from A - H commands to incorporate a 17 LED prototype (igniter * 8 capacitor * 1, anode * 8)
     - enable alternate comm. protocol (SPI, serial (UART), CAN)
     - build the GUI
-    - 
+
+    """
