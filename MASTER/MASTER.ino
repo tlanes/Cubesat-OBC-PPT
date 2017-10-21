@@ -1,4 +1,6 @@
 //MASTER
+//Last edited 10/21/17
+//Ty and friends
 #include <Wire.h>
 #include <avr/wdt.h>
 
