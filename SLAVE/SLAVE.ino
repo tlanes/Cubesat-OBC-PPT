@@ -61,6 +61,16 @@ switch(c){
       delay(600);
     }
     break;
+    case 'D':
+    for (int i = 0; i < 10000; i++)
+    {
+      digitalWrite(2,HIGH);
+      delayMicroseconds(5);
+      digitalWrite(2,LOW);
+      delayMicroseconds(5);
+      
+    }
+    break;
   default:
     Serial.println("Not a valid input command");
     break;
