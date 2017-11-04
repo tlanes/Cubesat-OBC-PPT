@@ -2,38 +2,53 @@
 //
 // by Dominic Bonelli
 
-void wait(double &deg)
+void wait(double &deg, int maneuver)     // deg is in radians
 {
-	double waitTime = deg*[some value we will later determine];
+	if (maneuver == 0){		//ROLL
+	double waitTime = deg*2.2; 	// This coefficient is in
+				     	// seconds per radians.
+	} if (maneuver == 1){		//YAW
+	double waitTime = deg*11.1;
+	} if (maneuver == 2){		//PITCH
+	double waitTime = deg*11.1;
+	}
 	delay(waitTime);
 }
 
-void firstFire(int &fireMatrix[2][2]) // fireMatrix contains first fired pair 
-				      // (matrix elements [0][0] and [0][1])
-				      // and the last fired pair (matririx
-				      // elements [1][0] and [1][1]).
+void firstFire(int &fireArray[4]) // First thruster 1 [0], first 
+				  // thruster 2 [1], last thruster
+				  // 1 [2], last thuster 2 [3]
 {
+	digitalWrite(HV, HIGH);		// HV is a global constant
+					// because it is not
+					// decided by minShock().
+	delay(750);
 	for (int i = 0; i < 10000; i++) //10000 is for scaling
     	{
-      		digitalWrite(fireMatrix[0][0],HIGH);
-		digitalWrite(fireMatrix[0][1],HIGH);
+      		digitalWrite(fireArray[0],HIGH);
+		digitalWrite(fireArray[1],HIGH);
      		delayMicroseconds(5);
-      		digitalWrite(fireMatrix[0][0],LOW);
-		digitalWrite(fireMatrix[0][1],LOW);
+      		digitalWrite(fireArray[0],LOW);
+		digitalWrite(fireArray[1],LOW);
       		delayMicroseconds(5);
 	}
+	digitalWrite(HV, LOW);
 
-void lastFire(int &fireMatrix[2][2])
+void lastFire(int &fireArray[4])
 {
+	digitalWrite(HV, HIGH);
+	delay(750);
 	for (int i = 0; i < 10000; i++)
     	{
-      		digitalWrite(fireMatrix[1][0],HIGH);
-		digitalWrite(fireMatrix[1][1],HIGH);
+      		digitalWrite(fireArray[2],HIGH);
+		digitalWrite(fireArray[3],HIGH);
      		delayMicroseconds(5);
-      		digitalWrite(fireMatrix[1][0],LOW);
-		digitalWrite(fireMatrix[1][1],LOW);
+      		digitalWrite(fireArray[2],LOW);
+		digitalWrite(fireArray[3],LOW);
       		delayMicroseconds(5);
 	}
+	digitalWrite(HV, LOW);
+
 
 }
 
