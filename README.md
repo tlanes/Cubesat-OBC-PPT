@@ -1,11 +1,11 @@
 # Cubesat-OBC-PPT
-    simulating i2c protocol between two computers for **Cubesat PPT ACS** ...
-        **MASTER - OBC**
-            Can send commands A - H via serial input from user
-        **SLAVE - PPT**
-            Receives commands from OBC and switches to determine
-            which LED to blink. ACKs to the OBC whether fire was
-            successful.
+simulating i2c protocol between two computers for **Cubesat PPT ACS** ...
+**MASTER - OBC**
+    Can send commands A - H via serial input from user
+**SLAVE - PPT**
+    Receives commands from OBC and switches to determine
+    which LED to blink. ACKs to the OBC whether fire was
+    successful.
 
 ### !! TO-DO TODAY !!
     - [ ] write the 'wait(deg)'
