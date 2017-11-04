@@ -1,5 +1,5 @@
 # Cubesat-OBC-PPT
-simulating i2c protocol between two computers for **Cubesat PPT ACS** ...
+Simulating i2c protocol between two computers for **Cubesat PPT ACS** ...
 **MASTER - OBC**
     Can send commands A - H via serial input from user
 **SLAVE - PPT**
@@ -8,11 +8,11 @@ simulating i2c protocol between two computers for **Cubesat PPT ACS** ...
     successful.
 
 ### !! TO-DO TODAY !!
-- [ ] write the 'wait(deg)'
-- [ ] number switch schematic
-- [ ] pseudo-code 'firstFire(pin1,pin2)'
-- [ ] psuedo-code 'lastFire(pin1,pin2)'
-- [ ] pseudo-code 'minShock(dir)'
+[ ] write the 'wait(deg)'
+[ ] number switch schematic
+[ ] pseudo-code 'firstFire(pin1,pin2)'
+[ ] psuedo-code 'lastFire(pin1,pin2)'
+[ ] pseudo-code 'minShock(dir)'
 
 ### FUTURE TASKS
 - switch from A - H commands to incorporate a 17 LED prototype (igniter * 8, capacitor * 1, anode * 8)
