@@ -10,6 +10,13 @@
             successful.
     """
 
+## !! TO-DO TODAY !!
+    - [ ] write the 'wait(deg)'
+    - [ ] number switch schematic
+    - [ ] pseudo-code 'firstFire(pin1,pin2)'
+    - [ ] psuedo-code 'lastFire(pin1,pin2)'
+    - [ ] pseudo-code 'minShock(dir)'
+
 
 ## FUTURE TASKS
     - switch from A - H commands to incorporate a 17 LED prototype (igniter * 8, capacitor * 1, anode * 8)
@@ -27,5 +34,6 @@
         {3 switches activated}
 
     ### PITCH
-
     ### YAW
+
+
