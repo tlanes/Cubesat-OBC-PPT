@@ -5,12 +5,12 @@
 void wait(double &deg, int maneuver)     // deg is in radians
 {
 	if (maneuver == 0){		//ROLL
-	double waitTime = deg*2.2; 	// This coefficient is in
+	double waitTime = deg*22.2; 	// This coefficient is in
 				     	// seconds per radians.
 	} if (maneuver == 1){		//YAW
-	double waitTime = deg*11.1;
+	double waitTime = deg*111.1;
 	} if (maneuver == 2){		//PITCH
-	double waitTime = deg*11.1;
+	double waitTime = deg*111.1;
 	}
 	delay(waitTime);
 }
