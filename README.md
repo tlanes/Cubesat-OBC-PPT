@@ -16,6 +16,7 @@
     - enable alternate comm. protocol (SPI, serial (UART), CAN)
     - build the GUI
     - Functions needed
+    ### ROLL
         -minShock(bool direction)
         {find which pair of thrusters has the lowest shock counter}
         -firstFire(optimum pair)
@@ -24,3 +25,7 @@
         {calcuate time to rotate based on known inertial characteristics}
         -lastFire(opposite optimum pair)
         {3 switches activated}
+
+    ### PITCH
+
+    ### YAW
