@@ -8,7 +8,10 @@ void wait(double &deg)
 	delay(waitTime);
 }
 
-void firstFire(int &fireMatrix[2][2])
+void firstFire(int &fireMatrix[2][2]) // fireMatrix contains first fired pair 
+				      // (matrix elements [0][0] and [0][1])
+				      // and the last fired pair (matririx
+				      // elements [1][0] and [1][1]).
 {
 	for (int i = 0; i < 10000; i++) //10000 is for scaling
     	{
