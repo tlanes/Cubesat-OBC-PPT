@@ -52,5 +52,51 @@ void lastFire(int &fireArray[4])
 
 }
 
+int ct1, ct2, ct3, ct4, ct5, ct6, ct7, ct8 = 0; // PUT THIS IN THE
+						// MAIN!! This sets
+						// the thrust count
+						// to zero.
+
+int minShock(char dir)
+{
+	int choice1, choice2 = 0;
+	int finalChoice[2];
+	if (dir == +){
+		if (ct1 > ct5){
+			choice1 = ct1;
+		} else {
+			choice1 = ct5;
+		}
+		if (ct3 > ct7){
+			choice2 = ct3;
+		} else {
+			choice2 = ct7;
+		}
+		if (choice1 > choice2){
+			finalChoice = [1,5];
+		} else {
+			finalChoice = [3,7];
+		}
+	if (dir == -){
+		if (ct8 > ct4){
+			choice1 = ct8;
+		} else {
+			choice1 = ct4;
+		}
+		if (ct2 > ct6){
+			choice2 = ct2;
+		} else {
+			choice2 = ct6;
+		}
+		if (choice1 > choice2){
+			finalChoice = [8,4];
+		} else {
+			finalChoice = [2,6];
+		}
+	return finalChoice;
+}
+
+
+
 
 
