@@ -62,9 +62,28 @@ void Maneuver::opt(char dir){
 
 void Maneuver::fire(int opt[]){
 
+	digitalWrite(pinInit, HIGH);		// HV is a global constant
+					// because it is not
+					// decided by minShock().
+
+
 	for (i=0, i<sizeof(opt[]); i++){
+			
+	delay(750);
+	for (int i = 0; i < 10000; i++) //10000 is for scaling
+    	{
+      		digitalWrite(fireArray[0],HIGH);
+		digitalWrite(fireArray[1],HIGH);
+     		delayMicroseconds(5);
+      		digitalWrite(fireArray[0],LOW);
+		digitalWrite(fireArray[1],LOW);
+      		delayMicroseconds(5);
+	}
+	digitalWrite(HV, LOW);
 		
 	
+
+
 	//fire protocols	
 		
 	}
