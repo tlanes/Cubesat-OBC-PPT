@@ -1,0 +1,27 @@
+// Creation of class maneuver to set-up pitch roll and yaw
+//Last Edited by Erskine
+
+
+#ifndef Manuever.h
+#define Maneuver.h
+
+#include "Arduino.h"
+
+class Maneuver
+{
+	public:
+	Maneuver(_deg); // Constructor setup, degree to shift, maybe type?
+	int opt();
+	void fire( int a, int b);
+	waitpy();
+	waitR(); // different wait functions for different polar moment of inertias
+		
+
+	private:
+	int deg;
+	int rollOpt;
+	int revrollOpt;
+
+};
+
+#endif

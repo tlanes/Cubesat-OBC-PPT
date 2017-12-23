@@ -1,0 +1,105 @@
+// actual library for the maneuver functions
+//Last Edited by Erskine Thompson
+
+#include "Arduino.h"
+#include "Maneuver.h"
+
+
+Maneuver::Maneuver(_deg){
+deg = _deg
+}
+
+int Maneuver:pinInit = 2;
+
+int Maneuver::thrusterArray  //for the various thrusters, aligns with pinArr
+ = [1,2,3,4,5,6,7,8]; // set up according to clockwise
+
+
+
+int Maneuver::thrusterPinArr //thruister to pin conversion
+ = [3,4,5,6,7,8,9,10]; //to be later defined by pin setup -based on current
+
+
+/* defining the counterclockwise moment as positive (+) from the perspective
+of the normal vector from the PPT */
+
+void Maneuver::opt(char dir){
+
+	switch (dir) {
+
+	int a=0,b=0;
+
+		case '+':
+		
+		max(); //for roll set a and b
+		rollopt[] = [a,b];
+
+		min(); //for the rev direction set new values for a aand b
+		revrollOpt[] = [a,b];
+		
+		break;
+		//make rollOpt and revRollopt values per each case
+		//depends on the pins setup
+
+
+
+		case'-':
+
+		max(); //for roll set a and b neg direction
+		rollopt[2] = [a,b];
+
+		min(); //for the rev direction set new values for a and b pos
+			//direction
+		
+		revrollOpt2 = [a,b];
+
+
+		break;
+	}
+
+}
+
+
+void Maneuver::fire(int opt[]){
+
+	digitalWrite(pinInit, HIGH);		// HV is a global constant
+					// because it is not
+					// decided by minShock().
+
+
+	for (i=0, i<sizeof(opt[]); i++){
+			
+	delay(750);
+	for (int i = 0; i < 10000; i++) //10000 is for scaling
+    	{
+      		digitalWrite(fireArray[0],HIGH);
+		digitalWrite(fireArray[1],HIGH);
+     		delayMicroseconds(5);
+      		digitalWrite(fireArray[0],LOW);
+		digitalWrite(fireArray[1],LOW);
+      		delayMicroseconds(5);
+	}
+	digitalWrite(HV, LOW);
+		
+	
+
+
+	//fire protocols	
+		
+	}
+
+}
+
+void Maneuver::waitpy(){
+
+}
+
+void Maneuver::waitR(){
+
+}
+
+
+
+
+
+
