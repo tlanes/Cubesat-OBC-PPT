@@ -1,0 +1,32 @@
+Procedures for Uploading Code to Microcontroller
+	-Dominic Bonelli
+
+1) Open ISP sketch by going to File > Examples > ArduinoISP
+
+2) Load this ISP sketch into your Arduino
+
+3) Find and install the Arduino core support for the microcontroller 
+you want to program. For instance, here is the core support for an
+ATMega 16/16A: https://github.com/sudar/arduino-extra-cores
+Here is the core support for an ATtiny microcontroller:
+https://github.com/damellis/attiny
+
+4) Connect the microcontroller to your Arduino using the configuration
+shown here: 
+http://hardwarefun.com/tutorials/use-arduino-as-an-isp-programmer-to-program-non-arduino-avr-microcontrollers
+To do this, we will need:
+	-Some wires
+	-A breadboard
+	-USB cable to Arduino
+	-The Arduino (duh)
+	-An LED
+	-Our desired mircocontroller
+	-A 10 uF capacitor
+
+5) In the ISP sketch, burn the bootloader by selecting Tools > Burn
+Bootloader. Make sure that you select the correct board.
+
+6) Upload your sketch
+
+NOTE: these instructions are for the ATMega16 microcontroller. These
+instructions may vary if we use at different one.
