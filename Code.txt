@@ -1,1 +1,15 @@
-// code setting up the entirety of the 
+// code setting up the entirety of the: maneuvers
+// Last Editied by Erskine
+
+#include "Arduino.h"
+#include "Maneuver.h"
+
+int cnt[8];
+
+//zero count initialization
+
+for (c=0; i<sizeof(cnt), ++i){
+	cnt(i) = 0;
+
+
+
