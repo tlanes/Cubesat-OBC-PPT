@@ -10,17 +10,23 @@
 class Maneuver
 {
 	public:
-	Maneuver(_deg); // Constructor setup, degree to shift, maybe type?
-	int opt();
-	void fire( int a, int b);
-	waitpy();
-	waitR(); // different wait functions for different polar moment of inertias
+	static int pinInit;  //whatever pin number charges all the top plates
+	static int thrusterArray[];
+	static int thrusterPinArr[];
+	
+
+
+	Maneuver(int _deg); // Constructor setup, degree to shift, maybe type?
+	void opt(char dir);
+	void fire( int opt[]); //array for firing
+	void waitpy();
+	void waitR(); // different wait functions for different polar moment of inertias
 		
 
 	private:
 	int deg;
-	int rollOpt;
-	int revrollOpt;
+	int rollOpt[], revrollOpt[], set[], revSet[];
+	
 
 };
 
