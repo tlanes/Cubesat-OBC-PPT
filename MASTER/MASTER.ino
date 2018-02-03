@@ -14,8 +14,8 @@ void setup ()
   Wire.begin (MY_ADDRESS);
   pinMode (LED, OUTPUT);   
   Wire.onReceive(receiveEvent);  
-  wdt_disable(); 
-  wdt_enable(WDT0_4S); //watchdog enabled at 4s
+  //wdt_disable(); 
+  //wdt_enable(WDT0_4S); //watchdog enabled at 4s
   }  // end of setup
 
 void loop () 
