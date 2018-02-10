@@ -34,42 +34,17 @@ void receiveEvent (int howMany)
 
 switch(c){
   case 'A':
-    for (int i = 0; i < 10000; i++)
-    {
-      digitalWrite(2,HIGH);
-      delayMicroseconds(5);
-      digitalWrite(2,LOW);
-      delayMicroseconds(5);
-      
-    }
+      digitalWrite(5,HIGH);
+      delay(1000);
+      digitalWrite(5,LOW);
+      delay(1000);
     break;
+    
   case 'B':
-    for (int i = 0; i < 10; i++)
-    {
-      digitalWrite(3,HIGH);
-      delay(500);
-      digitalWrite(3,LOW);
-      delay(500);
-    }
-    break;
-  case 'C':
-    for (int i = 0; i < 10; i++)
-    {
-      digitalWrite(4,HIGH);
-      delay(600);
-      digitalWrite(4,LOW);
-      delay(600);
-    }
-    break;
-    case 'D':
-    for (int i = 0; i < 10000; i++)
-    {
-      digitalWrite(2,HIGH);
-      delayMicroseconds(5);
-      digitalWrite(2,LOW);
-      delayMicroseconds(5);
-      
-    }
+      digitalWrite(6,HIGH);
+      delay(1000);
+      digitalWrite(6,LOW);
+      delay(1000);
     break;
   default:
     Serial.println("Not a valid input command");
@@ -88,4 +63,3 @@ void requestEvent ()
   Wire.write(x);
   
 }
-
