@@ -1,4 +1,4 @@
-//SLAVE
+ //SLAVE
 #include <Wire.h>
 
 const byte MY_ADDRESS = 42;
@@ -34,18 +34,32 @@ void receiveEvent (int howMany)
 
 switch(c){
   case 'A':
-      digitalWrite(5,HIGH);
-      delay(1000);
+      digitalWrite(5,HIGH); //CHARGE TIME FOR CAP (2s)
+      delay(2000);
       digitalWrite(5,LOW);
-      delay(1000);
+      //delay(2000);
     break;
     
   case 'B':
-      digitalWrite(6,HIGH);
-      delay(1000);
-      digitalWrite(6,LOW);
-      delay(1000);
+      digitalWrite(6,HIGH); //Trigger SCR driver to apply Volt to electrodes
+      //delayMicroseconds(10);
+      
+      delayMicroseconds(30);
+      digitalWrite(7, HIGH); //trigger igniter circuit
+      delay(300);
+      digitalWrite(7, LOW);
+
+      digitalWrite(6,LOW); //turn off SCR driver trigger
+      
     break;
+    
+  //case 'C':
+    //  digitalWrite(7, HIGH);
+      //delay(1000);
+      //digitalWrite(7, LOW);
+      //delay(1000);
+    //break;
+    
   default:
     Serial.println("Not a valid input command");
     break;
